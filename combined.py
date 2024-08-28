@@ -7,7 +7,9 @@ tei_header_content = """
   <fileDesc>
     <titleStmt>
       <title>श्रीमद्भगवद्गीता</title>
-      <editor string="Shikha Thakur"/>
+      <editor role="Digital Editor">
+        <persName>Shikha Thakur</persName>
+      </editor>
     </titleStmt>
     <publicationStmt>
       <p string="Published electronically by Open Source"/>
@@ -44,5 +46,5 @@ tei += '</body></text></TEI>'
 
 # Parse the final TEI string to prettify and save
 soup = BeautifulSoup(tei, "xml")
-with open('combinedD_BhagavadGita.xml', 'w', encoding='utf-8') as file:
+with open('combined_BhagavadGita.xml', 'w', encoding='utf-8') as file:
     file.write(soup.prettify())
