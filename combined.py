@@ -46,5 +46,5 @@ tei += '</body></text></TEI>'
 
 # Parse the final TEI string to prettify and save
 soup = BeautifulSoup(tei, "xml")
-with open('combined_BhagavadGita.xml', 'w', encoding='utf-8') as file:
+with open('BhagavadGita.xml', 'w', encoding='utf-8') as file:
     file.write(soup.prettify())
